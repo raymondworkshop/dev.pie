@@ -1,3 +1,39 @@
+#### 2024-09-02
+
+-   TODO
+
+    -   build demo on pythonanywhere
+
+-   personal chat
+
+    -   FLASK
+
+        > source demoenv/bin/activate
+
+        > cd api/
+        > flask run
+
+    -   rbot
+
+        > llm aliases set rbot orca-mini-3b-gguf2-q4_0  
+        > llm chat -m rbot
+        > prompt engineering
+
+            - "you are a very friendly peer AI agent who can help youth and provide youth emotional support regarding their emotions"
+
+    -   [llm lib](https://simonwillison.net/2023/Jul/12/llm/)
+
+        > pip install llm
+        > llm install llm-gpt4all  
+        > /Users/zhaowenlong/.cache/gpt4all/orca-mini-3b-gguf2-q4_0
+
+    -   ollama
+
+        -   pdf ai?
+        -   [Self Hosting LLMs using Ollama](https://www.avni.sh/posts/homelab/self-hosting-ollama/)
+
+    -   fine-tuning LLM
+
 #### notes
 
 -   todo
