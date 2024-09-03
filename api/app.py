@@ -1,6 +1,6 @@
+import os
+
 from flask import Flask, render_template, request, jsonify
-
-
 from chat import get_conversation
 #from chat import translator
 
@@ -22,6 +22,3 @@ def get_messages():
     return response
 
      
-# Running app
-if __name__ == '__main__':
-    app.run(debug=True)
