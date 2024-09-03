@@ -2,7 +2,13 @@
 
 -   TODO
 
-    -   build demo on pythonanywhere
+    -   gcloud
+
+        > cd demo-pie  
+        > gcloud run deploy --source .
+
+    -   ~build demo on pythonanywhere~
+        -   ~use [mlc_llm](https://llm.mlc.ai/docs/install/mlc_llm.html#option-1-prebuilt-package)~
 
 -   personal chat
 
