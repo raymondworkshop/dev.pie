@@ -18,7 +18,11 @@ def get_messages():
     userText = request.args.get('msg')
     #en_userText = translator('zh', 'en', userText)
     response = get_conversation(userText)
-    print(response)
+    #print(response)
     return response
 
      
+# Running app
+if __name__ == '__main__':
+    app.run(debug=True)
+    #app.run(host='144.214.20.231',debug=True, threaded=True)
