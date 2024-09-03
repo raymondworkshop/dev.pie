@@ -18,7 +18,7 @@ def get_messages():
     userText = request.args.get('msg')
     #en_userText = translator('zh', 'en', userText)
     response = get_conversation(userText)
-    #print(response)
+    print(response)
     return response
 
      
