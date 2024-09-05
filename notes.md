@@ -2,6 +2,10 @@
 
 -   TODO
 
+    -   use the own server - pc
+
+        -   Cannot run on the cloud server
+
     -   gcloud
 
         > cd demo-pie  
