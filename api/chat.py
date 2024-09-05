@@ -7,7 +7,7 @@ def get_conversation(
         model=llm.get_model("orca-mini-3b-gguf2-q4_0"),
         #model=llm.get_model("/Users/zhaowenlong/.cache/gpt4all/llama-2-7b-chat.Q6_K"),
         system = "Answer like a very understanding  and supportive Cognitive behavioral Therapist to provide emotional relief and support regarding their emotions. Always answer as helpfully as possible, while being safe. This is very important to their emotions" 
-              ):
+        ):
     
     conv = model.conversation()
     response = conv.prompt(prompt, system=system)
