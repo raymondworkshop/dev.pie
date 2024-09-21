@@ -2,6 +2,15 @@
 
 -   TODO
 
+    -   use tailscale funnel to server
+
+             > tailscale funnel 5000 //share port 5000 with the internet
+
+    -   whatsapp interface
+
+        -   ~~ngrok server as the gateway~~
+        -   [running the API locally with ngrok](https://medium.com/discovery-at-nesta/combining-whatsapp-with-large-language-models-prototyping-with-twilio-and-flask-c29228d80feb)
+
     -   use the own server - pc
 
         -   Cannot run on the cloud server
