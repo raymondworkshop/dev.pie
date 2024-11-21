@@ -37,8 +37,8 @@ line-height: 30px;
 }
 .userText span {
 background-color: #808080;
-padding: 10px;
-border-radius: 2px;
+padding: none;
+border-radius: 1px;
 }
 .botText {
 color: white;
@@ -49,8 +49,8 @@ line-height: 30px;
 }
 .botText span {
 background-color: #4169e1;
-padding: 10px;
-border-radius: 2px;
+padding: none;
+border-radius: 1px;
 }
 #tidbit {
 position: absolute;

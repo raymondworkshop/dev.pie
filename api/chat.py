@@ -1,6 +1,6 @@
+"""
 import llm
 #from translate import translator
-
 
 def get_conversation(
         prompt, 
@@ -13,6 +13,7 @@ def get_conversation(
     response = conv.prompt(prompt, system=system)
     #zh_response = translator('en', 'zh', response.text())
     return response.text()
+"""
 
 """
 from langchain.prompts import PromptTemplate
@@ -22,33 +23,38 @@ from langchain.callbacks.streaming_stdout import (
     StreamingStdOutCallbackHandler
 )
 """
-"""
+
 from llama_cpp import Llama
 llm = Llama.from_pretrained(
-    repo_id="TheBloke/Llama-2-13B-chat-GGUF",
-    filename="llama-2-13b-chat.Q2_K.gguf",
-    chat_format="llama-2",
+    repo_id="lordjia/Llama-3-Cantonese-8B-Instruct",
+    filename="llama3-cantonese-8b-instruct-q4_0.gguf",
 )
-llm.create_chat_completion(
-      messages = [
-            {
-            "role": "system",
-            "content" : "You are a helpful and respectful assistant and therapist. Always answer as helpfully as possible, while being safe." 
-            },
-            {
-              "role": "user",
-              "content": "Describe this issues in detail please."
-           }
-        ]
+
+system_role = [
+    {
+        "role": "system",
+        "content": "像一位非常理解和支持的認知行為治療師一樣回答，為他們的情緒提供情緒緩解和支持。在確保安全的情況下，始終盡可能提供有幫助的答案。這對他們的情緒非常重要" 
+    },
+
+]
+
+
+def get_conversation(prompts):
+    response = llm.create_chat_completion(
+      messages = system_role+prompts
       )
-
-
-def get_conversation(prompt):
-    response = llm(prompt)
+    
     print(response)
-    return response
-"""
+    print(f'response: {response["choices"][0]["message"]["content"]}' )
+    print(f'history: {prompts}')
+    #return response
+
 
 if __name__ == "__main__":
-    prompt="I feel a bit tired today"
-    get_conversation(prompt)
+    #prompt="I feel a bit tired today"
+    prompt="我感到很難放鬆自己"
+    user_history = [{
+        "role": "user",
+        "content": prompt
+    }]
+    get_conversation(user_history)

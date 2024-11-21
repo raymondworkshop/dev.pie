@@ -28,5 +28,5 @@ def get_messages():
      
 # Running app
 if __name__ == '__main__':
-    app.run(debug=True,threaded=True)
+    app.run(DEBUG=True,threaded=True)
     #app.run(host='144.214.20.231',debug=True, threaded=True)
