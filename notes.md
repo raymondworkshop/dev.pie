@@ -2,26 +2,30 @@
 
 -   TODO
 
-    -   use tailscale funnel to server
+        -   use tailscale funnel to server
 
-             > tailscale funnel 5000 //share port 5000 with the internet
+                 > tailscale funnel 5000 //share port 5000 with the internet
 
-    -   whatsapp interface
+        -   whatsapp interface
 
-        -   ~~ngrok server as the gateway~~
-        -   [running the API locally with ngrok](https://medium.com/discovery-at-nesta/combining-whatsapp-with-large-language-models-prototyping-with-twilio-and-flask-c29228d80feb)
+            -   ~~ngrok server as the gateway~~
+            -   [Creating a WhatsApp Bot with Python](https://dev.to/whapicloud/creating-a-whatsapp-bot-with-python-a-step-by-step-guide-for-developer-1m9c)
+            -   [Create a Telegram Bot using Python](https://www.geeksforgeeks.org/create-a-telegram-bot-using-python/?ref=next_article)
+            -   [How to Create a Telegram Bot using Python](https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/)
+            - [Python Bot WhatsApp: a step-by-step guide for developer](https://medium.com/@whapicloud/python-bot-whatsapp-a-step-by-step-guide-for-developer-b11d600ad7f5)
+            - [Build a WhatsApp ChatBot using PYTHON](https://whapi.cloud/whatsapp-bot-python)
 
-    -   use the own server - pc
+        -   use the own server - pc
 
-        -   Cannot run on the cloud server
+            -   Cannot run on the cloud server
 
-    -   gcloud
+        -   gcloud
 
-        > cd demo-pie  
-        > gcloud run deploy --source .
+            > cd demo-pie
+            > gcloud run deploy --source .
 
-    -   ~build demo on pythonanywhere~
-        -   ~use [mlc_llm](https://llm.mlc.ai/docs/install/mlc_llm.html#option-1-prebuilt-package)~
+        -   ~build demo on pythonanywhere~
+            -   ~use [mlc_llm](https://llm.mlc.ai/docs/install/mlc_llm.html#option-1-prebuilt-package)~
 
 -   personal chat
 
@@ -30,6 +34,7 @@
         > source demoenv/bin/activate
 
         > cd api/
+
         > flask run
 
     -   rbot
