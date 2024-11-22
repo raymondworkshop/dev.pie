@@ -30,31 +30,74 @@ llm = Llama.from_pretrained(
     filename="llama3-cantonese-8b-instruct-q4_0.gguf",
 )
 
-system_role = [
+messages = [
     {
         "role": "system",
         "content": "像一位非常理解和支持的認知行為治療師一樣回答，為他們的情緒提供情緒緩解和支持。在確保安全的情況下，始終盡可能提供有幫助的答案。這對他們的情緒非常重要" 
     },
-
 ]
 
+user_history = []
+def get_user_prompt(prompt):
+    user_prompt = {
+        "role": "user",
+        "content": prompt
+    }
+    return user_prompt
 
-def get_conversation(prompts):
-    response = llm.create_chat_completion(
-      messages = system_role+prompts
-      )
+
+def get_conversation(prompt):
+    user_prompt = get_user_prompt(prompt)
+    user_history.append(user_prompt)
+    #print(user_history)
+    messages.extend(user_history) 
+    print(messages)
+
+    response = llm.create_chat_completion(messages)
+    """
+        messages = 
+        [
+            {
+                "role": "system",
+                "content": "像一位非常理解和支持的認知行為治療師一樣回答，為他們的情緒提供情緒緩解和支持。在確保安全的情況下，始終盡可能提供有幫助的答案。這對他們的情緒非常重要" 
+            },
+            {
+                "role": "user",
+                "content": prompt
+            },
+        ]
+        #print(messages)
+    """
+    #)
     
     print(response)
-    print(f'response: {response["choices"][0]["message"]["content"]}' )
-    print(f'history: {prompts}')
-    #return response
-
+    answer = response["choices"][0]["message"]["content"]
+    #print(f'response: answer')
+    print(f'history: {user_history}')
+    if not answer:
+        return answer
+    else:
+        return prompt + "?"
 
 if __name__ == "__main__":
     #prompt="I feel a bit tired today"
-    prompt="我感到很難放鬆自己"
-    user_history = [{
-        "role": "user",
-        "content": prompt
-    }]
-    get_conversation(user_history)
+    prompt1="我感到很難放鬆自己"
+    prompt2="我對任何事也沒有熱衷"
+    """
+    messages = [
+            {
+                "role": "system",
+                "content": "像一位非常理解和支持的認知行為治療師一樣回答，為他們的情緒提供情緒緩解和支持。在確保安全的情況下，始終盡可能提供有幫助的答案。這對他們的情緒非常重要" 
+            },
+            {
+                "role": "user",
+                "content": prompt1
+            },
+            {
+                "role": "user",
+                "content": prompt2
+            },
+        ]
+    """
+
+    get_conversation(prompt1)

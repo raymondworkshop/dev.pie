@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template, request, jsonify
-from chat import get_conversation
+from chat_can import get_conversation
 #from chat import translator
 
 
@@ -21,8 +21,9 @@ def about():
 def get_messages():
     userText = request.args.get('msg')
     #en_userText = translator('zh', 'en', userText)
+    #print(userText)
     response = get_conversation(userText)
-    #print(response)
+    print(response)
     return response
 
      
