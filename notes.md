@@ -10,7 +10,7 @@
 
             -   ~~ngrok server as the gateway~~
             -   [Creating a WhatsApp Bot with Python](https://dev.to/whapicloud/creating-a-whatsapp-bot-with-python-a-step-by-step-guide-for-developer-1m9c)
-            -   [Create a Telegram Bot using Python](https://www.geeksforgeeks.org/create-a-telegram-bot-using-python/?ref=next_article)
+            -   [Create a Telegram Bot](https://tcsky.cc/tips-01-telegram-chatbot/)
             -   [How to Create a Telegram Bot using Python](https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/)
             - [Python Bot WhatsApp: a step-by-step guide for developer](https://medium.com/@whapicloud/python-bot-whatsapp-a-step-by-step-guide-for-developer-b11d600ad7f5)
             - [Build a WhatsApp ChatBot using PYTHON](https://whapi.cloud/whatsapp-bot-python)

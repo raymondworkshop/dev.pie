@@ -1,4 +1,3 @@
-"""
 import llm
 #from translate import translator
 
@@ -13,7 +12,7 @@ def get_conversation(
     response = conv.prompt(prompt, system=system)
     #zh_response = translator('en', 'zh', response.text())
     return response.text()
-"""
+
 
 """
 from langchain.prompts import PromptTemplate
@@ -24,6 +23,7 @@ from langchain.callbacks.streaming_stdout import (
 )
 """
 
+"""
 from llama_cpp import Llama
 llm = Llama.from_pretrained(
     repo_id="lordjia/Llama-3-Cantonese-8B-Instruct",
@@ -54,20 +54,6 @@ def get_conversation(prompt):
     print(messages)
 
     response = llm.create_chat_completion(messages)
-    """
-        messages = 
-        [
-            {
-                "role": "system",
-                "content": "像一位非常理解和支持的認知行為治療師一樣回答，為他們的情緒提供情緒緩解和支持。在確保安全的情況下，始終盡可能提供有幫助的答案。這對他們的情緒非常重要" 
-            },
-            {
-                "role": "user",
-                "content": prompt
-            },
-        ]
-        #print(messages)
-    """
     #)
     
     print(response)
@@ -78,6 +64,7 @@ def get_conversation(prompt):
         return answer
     else:
         return prompt + "?"
+"""
 
 if __name__ == "__main__":
     #prompt="I feel a bit tired today"
